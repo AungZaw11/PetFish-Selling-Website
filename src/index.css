@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shadows+Into+Light+Two&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: "Inter", sans-serif;
+  --primary-color: #003366;
+}
+
+/* Font sizes
+Main Title:	text-4xl font-bold
+Subtitle:	text-base text-gray-600
+Section Headings:	text-xl font-semibold
+Subsection Headings:	text-lg font-semibold
+Bullet List Text:	text-sm
+Small Notes:	text-xs */

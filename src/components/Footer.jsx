@@ -72,8 +72,10 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
-                <FaMapMarkerAlt className="mr-2 text-[#00CED1]" /> 123 Ocean
-                Avenue, Yangon
+                <FaMapMarkerAlt className="mr-2 text-[#00CED1]" /> 44 St, 65 x
+                66 Street,
+                <br />
+                Nan Shae, Mandalay, Myanmar
               </li>
               <li className="flex items-center">
                 <FaPhone className="mr-2 text-[#00CED1]" /> +95 9 123 456 789
@@ -89,13 +91,13 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">We Accept</h4>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-2 py-1 bg-white/10 rounded text-xs">
+              <span className="px-2 py-1 bg-white/10 rounded text-sm">
                 WavePay
               </span>
-              <span className="px-2 py-1 bg-white/10 rounded text-xs">
+              <span className="px-2 py-1 bg-white/10 rounded text-sm">
                 KBZ Pay
               </span>
-              <span className="px-2 py-1 bg-white/10 rounded text-xs">MPU</span>
+              <span className="px-2 py-1 bg-white/10 rounded text-sm">MPU</span>
             </div>
             <div className="flex items-center text-xs text-gray-500">
               <FaCreditCard className="mr-1" /> Secure payments

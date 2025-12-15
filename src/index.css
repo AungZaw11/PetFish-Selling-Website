@@ -1,16 +1,39 @@
+/* Import Tailwind base styles */
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shadows+Into+Light+Two&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Import Google Fonts (Inter + Noto Serif Myanmar + others if needed) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif+Myanmar:wght@400;500;600;700&display=swap");
+
+/* Define local Myanmar3 font (optional if you have the file in /public/fonts/) */
+@font-face {
+  font-family: "Myanmar3";
+  src: url("/fonts/Myanmar3.woff2") format("woff2"),
+    url("/fonts/Myanmar3.woff") format("woff"),
+    url("/fonts/Myanmar3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Root variables */
 :root {
-  font-family: "Inter", sans-serif;
   --primary-color: #003366;
 }
 
-/* Font sizes
-Main Title:	text-4xl font-bold text-[#003366]
-Subtitle:	text-base text-gray-600
-Section Headings:	text-xl font-bold
-Subsection Headings:	text-lg font-semibold
-Bullet List Text:	text-sm
-paragraph: text-gray-600 text-md
-Small Notes:	text-xs */pnpm add lucide-react
+/* Global font setup */
+html,
+body {
+  font-family: "Myanmar3", "Noto Serif Myanmar", "Inter", sans-serif;
+  background-color: #fafafa;
+  color: #001f3f;
+  margin: 0;
+  padding: 0;
+}
+
+/* Utility classes for bilingual content */
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-myanmar {
+  font-family: "Myanmar3", "Noto Serif Myanmar", sans-serif;
+}

@@ -336,7 +336,7 @@ function ShopInfo() {
             <h2 className="text-xl font-bold text-[#003366] mb-5 flex items-center gap-2">
               About Owner
             </h2>
-            
+            <h3 className="text-md font-bold text-[#003366] mb-4">Aung Win Naing (Founder)</h3>
             <p className="text-gray-600 text-md text-justify mb-4 leading-relaxed">
               {showMore ? (
                 <>

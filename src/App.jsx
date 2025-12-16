@@ -5,6 +5,10 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import OurLegacy from "./Pages/Legacy";
 import CareGuide from "./Pages/CareGuide"; // ✅ default import
+import HomePage from "./Pages/Home";
+// import CollectionPage from "./CollectionPage";
+// import FishDetailsPage from "./FishDetailsPage";
+
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/legacy" element={<OurLegacy />} />
         <Route path="/care-guides" element={<CareGuide />} />{" "}
+        <Route path="/" element={<HomePage />} />
+      <Route path="/collection" element={<CollectionPage />} />
+      <Route path="/fish/:id" element={<FishDetailsPage />} />
+
         {/* ✅ matches default export */}
       </Routes>
 

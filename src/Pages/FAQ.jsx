@@ -60,7 +60,7 @@ function FAQ() {
 
   return (
     <>
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-myanmar lg:mx-80">
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  lg:mx-80">
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16">

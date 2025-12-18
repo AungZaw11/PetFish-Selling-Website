@@ -111,9 +111,9 @@ function ShopInfo() {
     <>
       <div className="bg-[#DFF8FF] pb-15">
         {/* Hero Section */}
-        <section className="bg-[#003366] text-white p-4 py-16 mb-15 text-center">
-          <h1 className="text-4xl font-bold tracking-wide">Shop Information</h1>
-          <p className="mt-2 opacity-80 text-sm py-4">
+        <section className="bg-[#003366] text-white p-4 py-20 mb-15 text-center">
+          <h1 className="text-3xl font-bold md:text-4xl">Shop Information</h1>
+          <p className="opacity-80 mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
             Everything you need to know about Due Seller
           </p>
         </section>

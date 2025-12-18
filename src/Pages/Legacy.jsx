@@ -32,9 +32,9 @@ function OurLegacy() {
   return (
     <div className="w-full bg-cyan-50">
       {/* HERO */}
-      <section className="bg-[#003366] text-white px-4 py-16 text-center">
+      <section className="bg-[#003366] text-white px-4 py-20 text-center">
         <h1 className="text-3xl font-bold md:text-4xl">Our Legacy</h1>
-        <p className="mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
+        <p className="opacity-80 mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
           Over 20 years of passion, expertise, and dedication to the aquarium
           hobby.
         </p>

@@ -111,7 +111,7 @@ function ShopInfo() {
     <>
       <div className="bg-[#DFF8FF] pb-15">
         {/* Hero Section */}
-        <section className="bg-[#003366] text-white p-4 py-20 mb-15 text-center">
+        <section className="bg-[#003366] text-white p-4 py-16 mb-15 text-center">
           <h1 className="text-4xl font-bold tracking-wide">Shop Information</h1>
           <p className="mt-2 opacity-80 text-sm py-4">
             Everything you need to know about Due Seller
@@ -291,8 +291,8 @@ function ShopInfo() {
             <h2 className="text-xl font-bold text-[#003366] mb-7 flex items-center gap-2">
               <span><img src={Policy} alt="" /></span>Shop Policies
             </h2>
-            <div className="grid grid-cols-1 px-5 md:grid-cols-3 gap-5">
-              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3">
+            <div className="grid grid-cols-1 px-4 md:grid-cols-3 gap-5">
+              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Delivery} alt="" /></span>Delivery Policy
                 </h3>
@@ -304,18 +304,18 @@ function ShopInfo() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-[#FF7F50] border-solid rounded-sm px-3">
+              <div className="border-l-4 border-[#FF7F50] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Order} alt="" /></span>Order Policy
                 </h3>
                 <ul className="list-disc list-inside space-y-3 text-sm text-gray-500 ">
-                  <li>Order: TikTok, Telegram, or Facebook</li>
+                  <li>Via TikTok, Telegram, or Facebook</li>
                   <li>Specify the type of fish you want</li>
                   <li>Place your order anytime Mon - Sat</li>
                 </ul>
               </div>
 
-              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3">
+              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Payment} alt="" /></span>Payment Policy
                 </h3>

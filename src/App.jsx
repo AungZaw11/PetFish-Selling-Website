@@ -4,29 +4,29 @@ import { PaymentPage } from "./Pages/Payment";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import OurLegacy from "./Pages/Legacy";
-import CareGuide from "./Pages/CareGuide"; // ✅ default import
+import CareGuide from "./Pages/CareGuide";
 import HomePage from "./Pages/Home";
 import FAQ from "./Pages/FAQ";
-// import CollectionPage from "./CollectionPage";
-// import FishDetailsPage from "./FishDetailsPag
+import { Collection } from "./Pages/Collection"; // ✅ Correct: named export from Collection.jsx
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
       <Routes>
+        {/* Main routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/fish" element={<Collection />} />{" "}
+        {/* ✅ Must be /fish to match Navbar */}
+        {/* Other pages */}
         <Route path="/shop-info" element={<ShopInfo />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/legacy" element={<OurLegacy />} />
-        <Route path="/care-guides" element={<CareGuide />} />{" "}
-        <Route path="/" element={<HomePage />} />
-        {/* <Route path="/collection" element={<CollectionPage />} />
-      <Route path="/fish/:id" element={<FishDetailsPage />} /> */}
-        <Route path="/faq" element={<FAQ />} />{" "}
-        {/* ✅ matches default export */}
+        <Route path="/care-guides" element={<CareGuide />} />
+        <Route path="/faq" element={<FAQ />} />
+        {/* Optional: catch-all for 404 */}
+        {/* <Route path="*" element={<HomePage />} /> */}
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );

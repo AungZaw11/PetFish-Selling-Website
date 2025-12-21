@@ -1,5 +1,4 @@
 import Phone from "../assets/Shop Info/phone.svg";
-import Mail from "../assets/Shop Info/mail.svg";
 import Facebook from "../assets/Shop Info/fb.svg";
 import Telegram from "../assets/Shop Info/telegram.svg";
 import Tiktok from "../assets/Shop Info/tiktok.svg";
@@ -33,7 +32,7 @@ function ShopInfo() {
     },
     {
       icon: "🦈",
-      title: "Wild Fish",
+      title: "Flower Horn",
       desc: "Rare and unique specimens",
     },
   ];
@@ -45,31 +44,36 @@ function ShopInfo() {
       icon: Phone,
       alt: "phone icon" 
     },
-    { label: "Email", 
-      value: "contact@dveseller.com", 
-      icon: Mail,
-      alt: "mail icon"
+    { label: "TikTok", 
+      value: "@due.seller", 
+      icon: Tiktok,
+      alt: "Instagram icon",
+      link: "https://www.tiktok.com/@due.seller?is_from_webapp=1&sender_device=pc"
     },
     { label: "Facebook", 
       value: "Due Seller",
       icon: Facebook,
-      alt: "Facebook icon" 
-    },
-    { label: "TikTok", 
-      value: "@due.seller", 
-      icon: Tiktok,
-      alt: "Instagram icon"
-    },
-    { label: "Telegram", 
-      value: "@Awn6932", 
-      icon: Telegram,
-      alt: "Message icon"
+      alt: "Facebook icon",
+      link: "https://www.facebook.com/profile.php?id=61554060232785&mibextid=wwXIfr&mibextid=wwXIfr" 
     },
     { label: "Messenger", 
       value: "@DveSeller", 
       icon: Message,
       alt: "Message icon"
     },
+    { label: "Telegram Channel", 
+      value: "Due Seller", 
+      icon: Message,
+      alt: "Telegram icon",
+      link: "https://t.me/Dueseller",
+    },
+    { label: "Telegram", 
+      value: "@Awn6932", 
+      icon: Telegram,
+      alt: "Telegram icon",
+      link: "https://t.me/Awn6932"
+    },
+    
   ];
 
   // Service Offered Array
@@ -240,6 +244,7 @@ function ShopInfo() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {contacts.map((item, index) => (
+                <Link to={item.link}>
                 <div
                   key={index}
                   className="bg-[#e0fbff] px-6 py-4 rounded-xl flex items-start gap-4"
@@ -250,6 +255,7 @@ function ShopInfo() {
                     <p className="font-semibold text-[#003366]">{item.value}</p>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           </div>

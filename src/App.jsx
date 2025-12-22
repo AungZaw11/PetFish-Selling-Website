@@ -7,6 +7,7 @@ import OurLegacy from "./Pages/Legacy";
 import CareGuide from "./Pages/CareGuide";
 import HomePage from "./Pages/Home";
 import FAQ from "./Pages/FAQ";
+import FishDetail from "./Pages/Details";
 import { Collection } from "./Pages/Collection"; // ✅ Correct: named export from Collection.jsx
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         {/* Main routes */}
         <Route path="/" element={<HomePage />} />
         <Route path="/fish" element={<Collection />} />{" "}
+        <Route path="/fish/:slug" element={<FishDetail />} />
         {/* ✅ Must be /fish to match Navbar */}
         {/* Other pages */}
         <Route path="/shop-info" element={<ShopInfo />} />

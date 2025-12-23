@@ -72,7 +72,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
-                <FaMapMarkerAlt className="mr-2 text-[#00CED1]" /> 44 St, 65 x
+                <FaMapMarkerAlt className="mr-2 text-[#00CED1]" /> 14 St, 65 x
                 66 Street,
                 <br />
                 Nan Shae, Mandalay, Myanmar

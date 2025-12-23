@@ -60,15 +60,15 @@ function FAQ() {
 
   return (
     <>
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-myanmar lg:mx-80">
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  xl:mx-80">
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#001F3F] mb-4">
+          <h1 className="text-4xl font-bold text-[#003366] mb-4">
             FAQ
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Answers to frequently asked questions about caring tips and purchasing steps.
+            Answers to frequently asked questions about caring tips and purchasing process.
           </p>
         </div>
 

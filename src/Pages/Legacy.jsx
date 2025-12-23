@@ -32,9 +32,9 @@ function OurLegacy() {
   return (
     <div className="w-full bg-cyan-50">
       {/* HERO */}
-      <section className="bg-[#003366] text-white px-4 py-16 text-center">
+      <section className="bg-[#003366] text-white px-4 py-20 text-center">
         <h1 className="text-3xl font-bold md:text-4xl">Our Legacy</h1>
-        <p className="mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
+        <p className="opacity-80 mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
           Over 20 years of passion, expertise, and dedication to the aquarium
           hobby.
         </p>
@@ -99,16 +99,35 @@ function OurLegacy() {
       {/* VIDEO */}
       <section className="px-4 pb-20 flex justify-center">
         <div className="w-full max-w-4xl">
-          <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/KYnK5OuFdCE?si=vBaMjTW8Vm2n1Q2u"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+          {/* no gap here */}
+          <div className="flex flex-col sm:flex-row">
+            {/* Video 1 */}
+            <div className="w-full sm:w-1/2">
+              <div className="relative aspect-[9/16] overflow-hidden shadow-lg">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/LcLcOp1Png4"
+                  title="ငါးတောက်ခေါက်နဲ့ Wild Betta ဘယ်လိုခွဲမလဲ?"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Video 2 */}
+            <div className="w-full sm:w-1/2">
+              <div className="relative aspect-[9/16] overflow-hidden shadow-lg">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/n5aih2Wr4yQ"
+                  title="ဖိုက်တာဆိုတာဘာလဲ?"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -132,4 +151,5 @@ function OurLegacy() {
 }
 
 export default OurLegacy;
+
 

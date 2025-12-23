@@ -1,5 +1,4 @@
 import Phone from "../assets/Shop Info/phone.svg";
-import Mail from "../assets/Shop Info/mail.svg";
 import Facebook from "../assets/Shop Info/fb.svg";
 import Telegram from "../assets/Shop Info/telegram.svg";
 import Tiktok from "../assets/Shop Info/tiktok.svg";
@@ -33,7 +32,7 @@ function ShopInfo() {
     },
     {
       icon: "🦈",
-      title: "Wild Fish",
+      title: "Flower Horn",
       desc: "Rare and unique specimens",
     },
   ];
@@ -45,31 +44,36 @@ function ShopInfo() {
       icon: Phone,
       alt: "phone icon" 
     },
-    { label: "Email", 
-      value: "contact@dveseller.com", 
-      icon: Mail,
-      alt: "mail icon"
+    { label: "TikTok", 
+      value: "@due.seller", 
+      icon: Tiktok,
+      alt: "Instagram icon",
+      link: "https://www.tiktok.com/@due.seller?is_from_webapp=1&sender_device=pc"
     },
     { label: "Facebook", 
       value: "Due Seller",
       icon: Facebook,
-      alt: "Facebook icon" 
-    },
-    { label: "TikTok", 
-      value: "@due.seller", 
-      icon: Tiktok,
-      alt: "Instagram icon"
-    },
-    { label: "Telegram", 
-      value: "@Awn6932", 
-      icon: Telegram,
-      alt: "Message icon"
+      alt: "Facebook icon",
+      link: "https://www.facebook.com/profile.php?id=61554060232785&mibextid=wwXIfr&mibextid=wwXIfr" 
     },
     { label: "Messenger", 
       value: "@DveSeller", 
       icon: Message,
       alt: "Message icon"
     },
+    { label: "Telegram Channel", 
+      value: "Due Seller", 
+      icon: Message,
+      alt: "Telegram icon",
+      link: "https://t.me/Dueseller",
+    },
+    { label: "Telegram", 
+      value: "@Awn6932", 
+      icon: Telegram,
+      alt: "Telegram icon",
+      link: "https://t.me/Awn6932"
+    },
+    
   ];
 
   // Service Offered Array
@@ -112,8 +116,8 @@ function ShopInfo() {
       <div className="bg-[#DFF8FF] pb-15">
         {/* Hero Section */}
         <section className="bg-[#003366] text-white p-4 py-20 mb-15 text-center">
-          <h1 className="text-4xl font-bold tracking-wide">Shop Information</h1>
-          <p className="mt-2 opacity-80 text-sm py-4">
+          <h1 className="text-3xl font-bold md:text-4xl">Shop Information</h1>
+          <p className="opacity-80 mt-3 text-sm text-blue-100 max-w-xl mx-auto md:text-base">
             Everything you need to know about Due Seller
           </p>
         </section>
@@ -209,7 +213,7 @@ function ShopInfo() {
               </p>
 
               <div className="mt-4">
-                <Link to="https://maps.app.goo.gl/Bhkd63pMnWkQXmAY6?g_st=ic" className="px-3 py-1 bg-blue-100 rounded-full text-sm text-[#003355] border border-[#bfe8ff] inline-flex items-center gap-1">
+                <Link to="https://maps.app.goo.gl/AeARWc3wAjavRGBV8?g_st=it" className="px-3 py-1 bg-blue-100 rounded-full text-sm text-[#003355] border border-[#bfe8ff] inline-flex items-center gap-1">
                   Map
                   <svg xmlns="http://www.w3.org/2000/svg"
                       fill="none" viewBox="0 0 24 24" strokeWidth="2"
@@ -240,6 +244,7 @@ function ShopInfo() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {contacts.map((item, index) => (
+                <Link to={item.link}>
                 <div
                   key={index}
                   className="bg-[#e0fbff] px-6 py-4 rounded-xl flex items-start gap-4"
@@ -250,6 +255,7 @@ function ShopInfo() {
                     <p className="font-semibold text-[#003366]">{item.value}</p>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -291,8 +297,8 @@ function ShopInfo() {
             <h2 className="text-xl font-bold text-[#003366] mb-7 flex items-center gap-2">
               <span><img src={Policy} alt="" /></span>Shop Policies
             </h2>
-            <div className="grid grid-cols-1 px-5 md:grid-cols-3 gap-5">
-              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3">
+            <div className="grid grid-cols-1 px-4 md:grid-cols-3 gap-5">
+              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Delivery} alt="" /></span>Delivery Policy
                 </h3>
@@ -304,18 +310,18 @@ function ShopInfo() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-[#FF7F50] border-solid rounded-sm px-3">
+              <div className="border-l-4 border-[#FF7F50] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Order} alt="" /></span>Order Policy
                 </h3>
                 <ul className="list-disc list-inside space-y-3 text-sm text-gray-500 ">
-                  <li>Order: TikTok, Telegram, or Facebook</li>
+                  <li>Via TikTok, Telegram, or Facebook</li>
                   <li>Specify the type of fish you want</li>
                   <li>Place your order anytime Mon - Sat</li>
                 </ul>
               </div>
 
-              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3">
+              <div className="border-l-4 border-[#00CED1] border-solid rounded-sm px-3 py-1">
                 <h3 className="text-md font-bold text-[#003366] mb-4 flex items-center gap-2">
                   <span><img src={Payment} alt="" /></span>Payment Policy
                 </h3>

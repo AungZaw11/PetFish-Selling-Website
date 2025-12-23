@@ -12,6 +12,7 @@ import slide1 from "../assets/Home/slide1.webp";
 import slide3 from "../assets/Home/slide3.webp";
 
 
+
 export default function HomePage() {
   /* ================= STATES ================= */
   const [showChanna, setShowChanna] = useState(false);

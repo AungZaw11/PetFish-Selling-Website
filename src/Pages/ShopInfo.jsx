@@ -23,17 +23,17 @@ function ShopInfo() {
     {
       icon: "🐠",
       title: "Betta Fish",
-      desc: "Premium quality Siamese fighting fish",
+      desc: "Freshwater labyrinth fish",
     },
     {
       icon: "🐟",
       title: "Channa Fish",
-      desc: "Tetras, Guppies, Goldfish & more",
+      desc: "Freshwater predator species",
     },
     {
       icon: "🦈",
       title: "Flower Horn",
-      desc: "Rare and unique specimens",
+      desc: "Hybrid ornamental cichlid",
     },
   ];
 

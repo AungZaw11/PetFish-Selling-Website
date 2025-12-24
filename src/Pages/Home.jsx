@@ -87,7 +87,7 @@ export default function HomePage() {
               </ul>
               <button
                 onClick={() => setShowChanna(!showChanna)}
-                className="mt-3 text-sm text-cyan-600 text-left"
+                className="mt-3 text-sm text-cyan-600 justify-center text-center"
               >
                 
                 {showChanna ? "See less" : "See more"}
@@ -116,7 +116,7 @@ export default function HomePage() {
               </ul>
               <button
                 onClick={() => setShowBetta(!showBetta)}
-                className="mt-3 text-sm text-cyan-600 text-left"
+                className="mt-3 text-sm text-cyan-600 text-center"
               >
                 
                 {showBetta ? "See less" : "See more"}
@@ -145,7 +145,7 @@ export default function HomePage() {
               </ul>
               <button
                 onClick={() => setShowFlowerhorn(!showFlowerhorn)}
-                className="mt-3 text-sm text-cyan-600 text-left"
+                className="mt-3 text-sm text-cyan-600 text-center"
               >
                 
                 {showFlowerhorn ? "See less" : "See more"}

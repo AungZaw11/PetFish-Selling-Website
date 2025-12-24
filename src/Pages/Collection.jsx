@@ -15,7 +15,7 @@ export default function Collection() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Title */}
-      <h1 className="text-3xl font-bold text-center mb-2">
+      <h1 className="text-4xl text-[#003366] font-bold text-center pt-7 mb-3">
         Our Fish Collection
       </h1>
       <p className="text-center text-gray-500 mb-8">

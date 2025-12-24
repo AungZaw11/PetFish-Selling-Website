@@ -67,7 +67,7 @@ function FAQ() {
           <h1 className="text-4xl font-bold text-[#003366] mb-4">
             FAQ
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Answers to frequently asked questions about caring tips and purchasing process.
           </p>
         </div>

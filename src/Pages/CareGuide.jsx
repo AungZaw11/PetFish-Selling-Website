@@ -68,7 +68,7 @@ export default function CareGuide() {
           <h1 className="text-4xl font-bold text-[#003366] mb-4">
             Fish Care Guide
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Betta Fish ကို ကျန်းမာပျော်ရွှင်စွာ နေထိုင်စေဖို့ လိုအပ်သော
             ဂရုပြုမှုများ။
           </p>

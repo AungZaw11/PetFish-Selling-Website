@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 
-import bgGIF from "../assets/Home/Beta Fish.gif";
+import bgVideo from "../assets/Home/Beta Fish.mp4";
 import xelophane from "../assets/Home/xelophane.webp";
 import snowdragon from "../assets/Home/snowdragon.webp";
 import mahachai from "../assets/Home/mahachai.webp";
@@ -24,11 +24,15 @@ export default function HomePage() {
     <div className="w-full text-[#0b2b4c]">
       {/* ================= HERO ================= */}
       <section className="relative bg-black text-white min-h-screen">
-        <img
-          src={bgGIF}
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src={bgVideo} type="video/mp4" />
+</video>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -278,68 +282,102 @@ export default function HomePage() {
         </div>
       </section>
       {/* ================= CARE GUIDE SLIDER ================= */}
-      <section className="bg-[#F4FBFF] py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-center mb-10">
-            Fish Care Tips
-          </h2>
+     <section className="bg-[#F4FBFF] py-20">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-2xl font-bold text-center mb-10">
+      Fish Care Tips
+    </h2>
 
-          <div className="relative overflow-hidden rounded-2xl bg-white">
-            <div
-              className="flex transition-transform duration-500"
-              style={{ transform: `translateX(-${slideIndex * 100}%)` }}
-            >
-              {[slide1, snowdragon, slide3].map((img, i) => (
-                <div
-                  key={i}
-                  className="min-w-full p-8 grid md:grid-cols-2 gap-6"
-                >
-                  <img
-                    src={img}
-                    className="h-64 w-full object-cover rounded-xl"
-                  />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">
-                      Fish Care Tip 
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Perform regular partial water changes <br/>
+    <div className="relative overflow-hidden rounded-2xl bg-white">
+      {/* SLIDES */}
+      <div
+        className="flex w-full transition-transform duration-500"
+        style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+      >
+        {[slide1, snowdragon, slide3].map((img, i) => (
+          <div
+            key={i}
+            className="min-w-full p-8 grid md:grid-cols-2 gap-6"
+          >
+            <img
+              src={img}
+              alt="Fish care"
+              className="h-64 w-full object-cover rounded-xl"
+            />
 
-Remove uneaten food promptly <br/>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">
+                {i === 0 && "Betta Fish Care Tips"}
+                {i === 1 && "Snow Dragon Care Tips"}
+                {i === 2 && "Mahachai Fish Care Tips"}
+              </h3>
 
-Maintain low ammonia & nitrite levels <br/>
+              <p className="text-gray-600 text-sm leading-6">
+                {i === 0 && (
+                  <>
+                    Use gentle filtration <br />
+                    Keep water temperature 24–28°C <br />
+                    Remove uneaten food promptly <br />
+                    Avoid strong water currents <br />
+                  </>
+                )}
 
-Use good filtration (gentle for Betta) <br/>
-                    </p>
-                    <Link to="/care-guides" className="text-cyan-600 text-sm">
-                      Read more →
-                    </Link>
-                  </div>
-                </div>
-              ))}
+                {i === 1 && (
+                  <>
+                    Maintain strong filtration <br />
+                    Perform weekly water changes <br />
+                    Keep ammonia & nitrite at 0 ppm <br />
+                    Feed high-protein food <br />
+                  </>
+                )}
+
+                {i === 2 && (
+                  <>
+                    Use large tank with good aeration <br />
+                    Avoid overcrowding <br />
+                    Feed sinking pellets <br />
+                    Clean tank regularly <br />
+                  </>
+                )}
+              </p>
+
+              <Link
+                to="/care-guides"
+                className="text-cyan-600 text-sm mt-4 inline-block"
+              >
+                Read more →
+              </Link>
             </div>
-
-            {/* CONTROLS */}
-            <button
-              onClick={() =>
-                setSlideIndex(slideIndex === 0 ? 2 : slideIndex - 1)
-              }
-              className="absolute left-4 top-1/2 bg-white rounded-full w-10 h-10"
-            >
-              ←
-            </button>
-
-            <button
-              onClick={() =>
-                setSlideIndex(slideIndex === 2 ? 0 : slideIndex + 1)
-              }
-              className="absolute right-4 top-1/2 bg-white rounded-full w-10 h-10"
-            >
-              →
-            </button>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      {/* CONTROLS */}
+      <button
+        onClick={() =>
+          setSlideIndex(
+            slideIndex === 0 ? 2 : slideIndex - 1
+          )
+        }
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 shadow"
+      >
+        ←
+      </button>
+
+      <button
+        onClick={() =>
+          setSlideIndex(
+            slideIndex === 2 ? 0 : slideIndex + 1
+          )
+        }
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 shadow"
+      >
+        →
+      </button>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }

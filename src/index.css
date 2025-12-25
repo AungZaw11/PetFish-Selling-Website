@@ -18,7 +18,9 @@
 :root {
   --primary-color: #003366;
 }
-
+*{
+  scroll-behavior: smooth;
+}
 /* Global font setup */
 html,
 body {

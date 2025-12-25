@@ -233,7 +233,7 @@ export default function HomePage() {
             </div>
             {/* CARD 4 */}
             <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-              <div className="relative h-56">
+              <div className="relative h-60">
                 <img
                   src={samurai}
                   alt="Samurai"

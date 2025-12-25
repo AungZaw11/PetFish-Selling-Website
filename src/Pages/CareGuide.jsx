@@ -1,65 +1,232 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
+// Betta Guide Data
+const bettaGuide = {
+  id: 1,
+  title: "Betta Fish Care Guide",
+  description:
+    "Betta Fish ကို လူအများက Fighter Fish လို ခေါ်ကြပြီး အိမ်မွေးငါးအဖြစ် အလွန်လူကြိုက်များသည်။",
+  icon: FaCheckCircle,
+  content: [
+    {
+      subtitle: "မူလဇာတိနှင့် သဘာဝနေထိုင်ပုံ",
+      points: [
+        "ထိုင်းနိုင်ငံအလယ်ပိုင်း ရေတိမ်၊ ရေစီးနှေးသော လယ်ကွင်းများ၊ ရွံအိုင်များတွင် တွေ့ရှိခဲ့သည်။",
+        "ယနေ့အချိန်တွင် မြန်မာ၊ လာအို၊ ကမ္ဘောဒီးယား အပါအဝင် အရှေ့တောင်အာရှနိုင်ငံများတွင် သဘာဝအတိုင်း နေထိုင်နေသည်။",
+      ],
+    },
+    {
+      subtitle: "ရေအခြေအနေနှင့် အပူချိန်",
+      points: [
+        "ရေမာနှုန်း 5°–20° dH အတွင်း အသက်ရှင်နိုင်သည်။",
+        "အပူချိန် 75°F–80°F (24°C–27°C) ထားပေးသင့်သည်။",
+        "pH တန်ဖိုး 6.0–7.5 အတွင်းရှိရမည်။",
+      ],
+    },
+    {
+      subtitle: "ကန်အရွယ်အစားနှင့် နေထိုင်ပုံ",
+      points: [
+        "Betta Fish များသည် တစ်ကောင်တည်းနေရတာကို ကြိုက်သည်။",
+        "ကန်အရွယ်အစား 1–5 ဂါလံ သို့မဟုတ် 4” × 4” × 8” မှန်ကန် လေးတစ်လုံးနဲ့ လုံလောက်သည်။",
+      ],
+    },
+    {
+      subtitle: "အစားအစာနှင့် အာဟာရ",
+      points: [
+        "Carnivorous ဖြစ်သောကြောင့် အစာခြောက် (Betta pellets) နှင့် အစာရှင် (bloodworm, artemia, moina) ပေါင်းစပ်ကျွေးသင့်သည်။",
+        "တစ်နေ့ ၆–၁၀ လုံး ကျွေးပြီး မစားကျန်အစာကို ချက်ချင်းဖယ်ရှားရန်လိုသည်။",
+      ],
+    },
+    {
+      subtitle: "Tank Mates နှင့် အုပ်စုဖွဲနေထိုင်မှု",
+      points: [
+        "အထီး Betta များကို တစ်ကောင်တည်း သီးသန့်ထားသင့်သည်။",
+        "အမ Betta များကို ကန်ကျယ်လုံလောက်ပါက အုပ်စုလိုက်ထားနိုင်သည်။",
+        "Guppy, Goldfish, Angelfish စသည့် အမြှီးရှည်ငါးများနှင့် မထားသင့်။",
+      ],
+    },
+    {
+      subtitle: "ထိန်းသိမ်းဂရုစိုက်မှု",
+      points: [
+        "ရေအပူချိန်၊ ရေအရည်အသွေးကို အမြဲစစ်ဆေးရန်လိုသည်။",
+        "3–5 ရက်အတွင်း ရေတစ်ဝက်ခန့် အစားထိုးပေးသင့်သည်။",
+        "Ammonia တက်လာခြင်းကြောင့် မျက်လုံးရောဂါ၊ အမြှီးအတောင်ရောဂါ ဖြစ်နိုင်သည်။",
+      ],
+    },
+  ],
+};
+
+// Flower Horn Guide Data (your provided data)
+const flowerHornGuide = {
+  id: 3,
+  title: "Flower Horn Fish Care Guide",
+  description:
+    "Flower Horn များသည် တောက်ပသောအရောင်အသွေး၊ ပုလဲစက်ပြောက်များနှင့် ဦးခေါင်းပေါ်ရှိ အဖု (Kok) ကြောင့် အိမ်မွေးငါးလောကတွင် အလွန်လူကြိုက်များသည်။ အရည်အသွေးမြင့် Flower Horn များသည် အလွန်တန်ဖိုးကြီးပြီး ကမ္ဘာတစ်ဝန်းရှိ ငါးဝါသနာရှင်များ တန်ဖိုးထားမွေးမြူကြသည်။",
+  icon: FaCheckCircle,
+  content: [
+    {
+      subtitle: "မူလဇာတိနှင့်သဘာဝနေထိုင်ပုံ ",
+      points: [
+        "Flower Horn များသည် သဘာဝမြစ်ချောင်းများတွင် ရှိသောငါးမဟုတ်ဘဲ South American cichlid မျိုးစိတ်များကို မျိုးစပ်ထားသော Hybrid ငါးများဖြစ်သည်။",
+        "၎င်းတိုကို လူတိုကသာ သီးသန့်မျိုးပွားမွေးမြူကြခြင်းဖြစ်သည်။",
+      ],
+    },
+    {
+      subtitle: "အရွယ်အစားနှင့် သက်တမ်း",
+      points: [
+        "အရွယ်ရောက်ပြီးသားငါးတစ်ကောင်သည် 12–16 inches (30–40 cm) အထိ ကြီးထွားနိုင်သည်။",
+        "အထီးများသည် အမများထက် ပိုမိုကြီးထွားလေ့ရှိပြီး ပိုမိုကြီးမားသော Kok (ဦးခေါင်းအဖု) ထွက်လာတတ်သည်။",
+        "စနစ်တကျပြုစုပါက သက်တမ်း 8–10 years အထိ နေနိုင်ပါသည်။",
+      ],
+    },
+    {
+      subtitle: "ရေအခြေအနေနှင့် အပူချိန်",
+      points: [
+        "အပူချိန် 26–30°C (79–86°F) အတွင်း ထားရှိပေးသင့်သည်။",
+        "pH level 7.0 – 8.0 အတွင်းရှိရမည်။",
+        "ငါး၏အရောင်နှင့် Kok ဖွံဖြိုးမှုအတွက် ရေအခြေအနေ တည်ငြိမ်နေရန် အလွန်အရေးကြီးသည်။",
+      ],
+    },
+    {
+      subtitle: "ကန်အရွယ်အစားနှင့် ပြင်ဆင်ပုံ",
+      points: [
+        "အနည်းဆုံး 55 gallons လိုအပ်ပြီး ငါးတစ်ကောင်တည်းအတွက် 75–100 gallons ရှိသောကန်က ပိုမိုသင့်တော်သည်။",
+        "သန့်ရှင်းသောရေနှင့် ကောင်းမွန်သော filtration system ရှိရန် လိုအပ်သည်။",
+        "ကန်အောက်ခြေတွင် သဲနု သိုမဟုတ် ဘာမှမခင်းဘဲထားခြင်း (Bare bottom) က ပိုကောင်းသည်။",
+        "ချွန်ထက်သော အလှဆင်ပစ္စည်းများနှင့် ရေပင်များကို ရှောင်ကြဉ်ပါ (ငါးက ဖျက်ဆီးပစ်နိုင်သောကြောင့်ဖြစ်သည်)။",
+      ],
+    },
+    {
+      subtitle: "အစားအစာနှင့် အာဟာရ",
+      points: [
+        "အသားနှင့် အပင် နှစ်မျိုးလုံးစားသော Omnivorous ဖြစ်သော်လည်း high-protein အစာကို ပိုကြိုက်သည်။",
+        "အရည်အသွေးမြင့် Flower Horn pellets များ၊ ပုစွန်၊ တီကောင် နှင့် frozen food များကို ကျွေးနိုင်သည်။",
+        "အစာအလွန်အကျွံကျွေးခြင်းကို ရှောင်ကြဉ်ပါ - တစ်နေ့ ၂ ကြိမ်ခန့် နည်းနည်းချင်းစီသာ ကျွေးသင့်သည်။",
+      ],
+    },
+    {
+      subtitle: "ထိန်းသိမ်းဂရုစိုက်မှုနှင့် Tank Mates",
+      points: [
+        "ရန်လိုတတ်သော စရိုက်ရှိသောကြောင့် တစ်ကောင်တည်းသာ သီးသန့်ထားသင့်သည်။",
+        "အခြားငါးများနှင့် အတူထားရန် လုံးဝအကြံမပြုပါ (နယ်မြေလုတတ်သောကြောင့်ဖြစ်သည်)။",
+        "တစ်ပတ်လျှင် တစ်ကြိမ် ရေ (20–30%) ပုံမှန်လဲပေးရမည်။",
+        "ရေသန့်ရှင်းမှုသည် ငါး၏ကျန်းမာရေး၊ အရောင်နှင့် Kok ထွက်ခြင်းအတွက် တိုက်ရိုက်သက်ရောက်မှုရှိသည်။",
+      ],
+    },
+  ],
+};
+const channaGuide = {
+  id: 2,
+  title: "Channa (Snakehead) Fish Care Guide",
+  description:
+    "Channa ငါးများသည် အားကောင်းပြီး ဉာဏ်ရည်မြင့်သော ရေချိုငါးများဖြစ်ကာ မြွေဦးခေါင်းပုံစံနှင့် အလွန်လှပသော အရောင်အသွေးများကြောင့် ငါးဝါသနာရှင်များကြားတွင် လူကြိုက်များပါသည်။",
+  icon: FaCheckCircle,
+  content: [
+    {
+      subtitle: "မူလဇာတိနှင့်သဘာဝနေထိုင်ပုံ",
+      points: [
+        "တောင်အာရှ၊ အရှေ့တောင်အာရှ နှင့် အရှေ့အာရှများတွင် မူလဇာတိရှိသည်။",
+        "မြစ်များ၊ ချောင်းများ၊ ရေကန်များ၊ ရေလွှမ်းမိုးပါက သစ်တောများတွင် နေထိုင်သည်။",
+      ],
+    },
+    {
+      subtitle: "အရွယ်အစားနှင့် သက်တမ်း",
+      points: [
+        "ပုလဲ Channa များ: 7–8 လက်မ (18–20 cm)",
+        "အလတ်စား: 12–18 လက်မ (30–45 cm)",
+        "ကြီးမားသော Channa များ (ဥပမာ Channa micropeltes): 1 မီတာ (39 လက်မ) အထိ",
+        "ဝယ်ယူမည်မှာ မဟုတ်မီ မျိုးစိတ်ကို သေချာစွာ သုတေသနပြုပါ။",
+      ],
+    },
+    {
+      subtitle: "ကန်အရွယ်အစား",
+      points: [
+        "အနည်းဆုံး: 55 ဂါလံ",
+        "ကြီးမားသောမျိုးစိတ်များအတွက်: 100 ဂါလံ နှင့် အထက်",
+        "ကန်ကြီးလေလေ ငါး၏စိတ်ဖိစီးမှုနှင့် ရန်လိုမှု လျော့နည်းလေလေ။",
+      ],
+    },
+    {
+      subtitle: "ရေအခြေအနေ",
+      points: [
+        "ရေချို (Freshwater)",
+        "အက်ဆစ်ဓာတ်နည်းနည်းပါသော ရေကို နှစ်သက်သည်။",
+        "အပူချိန်: 18–28°C (64–82°F)",
+        "pH: 5.0 – 7.5",
+      ],
+    },
+    {
+      subtitle: "အစားအစာနှင့် အာဟာရ",
+      points: [
+        "အသားစားသက်သက်သား (သတ္တဝါငှက်သားသီးသက်သက်သား) ဖြစ်သည်။",
+        "ကြက်သွန်နီ၊ ပုစွန်၊ တီကောင်၊ ငါးဖယ်လက်၊ အေးခဲအစာများ ကျွေးနိုင်သည်။",
+        "မသန့်ရှင်းသော အစာငါးများကို ရှောင်ကြဉ်ပါ (ရောဂါ ကူးစက်နိုင်ခြေရှိသောကြောင့်)။",
+      ],
+    },
+    {
+      subtitle: "Tank Mates နှင့် ထိန်းသိမ်းမှု",
+      points: [
+        "အခြားငါးများနှင့် တွဲမထားသင့်ပါ (ရန်လိုမှုများသောကြောင့်)။",
+        "တစ်ကောင်တည်း သီးသန့်ထားသင့်သည်။",
+        "တစ်ပတ်လျှင် ရေ 20–30% လဲပေးပါ။",
+        "ကန်အပေါ်ပိုင်းကို လုံအောင်ဖုံးပါ (Channa များ ခုန်တတ်သောကြောင့်)။",
+      ],
+    },
+    {
+      subtitle: "အရေးကြီးသတိပေးချက်များ",
+      points: [
+        "တချို့ Channa မျိုးစိတ်များသည် တချို့နိုင်ငံများတွင် တရားမဝင်ဖြစ်နိုင်သည်။",
+        "သဘာဝရေကြောင်းများသို့ လုံးဝမလွှတ်ပါနှင့်။",
+        "Channa များသည် ပတ်ဝန်းကျင်ကို ထိခိုက်စေနိုင်သော ငါးမျိုးစိတ်များဖြစ်သည်။",
+      ],
+    },
+  ],
+};
+
+// Reusable Guide Card Component
+function GuideCard({ guide }) {
+  const Icon = guide.icon;
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12">
+      <div className="p-8 border-b border-gray-100 bg-gray-50/50">
+        <div className="flex items-center mb-4">
+          <div className="p-3 bg-[#008080]/10 rounded-lg mr-4">
+            <Icon className="w-8 h-8 text-[#008080]" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-[#001F3F]">{guide.title}</h2>
+            <p className="text-gray-500">{guide.description}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-8 grid md:grid-cols-2 gap-8">
+        {guide.content.map((section, idx) => (
+          <div key={idx}>
+            <h3 className="text-lg font-semibold text-[#001F3F] mb-4 flex items-center">
+              <span className="w-1.5 h-1.5 bg-[#008080] rounded-full mr-2"></span>
+              {section.subtitle}
+            </h3>
+            <ul className="space-y-3">
+              {section.points.map((point, pIdx) => (
+                <li
+                  key={pIdx}
+                  className="flex items-start text-gray-600 text-sm"
+                >
+                  <FaCheckCircle className="w-4 h-4 text-[#008080] mt-0.5 mr-3 flex-shrink-0" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function CareGuide() {
-  const bettaGuide = {
-    id: 1,
-    title: "Betta Fish Care Guide",
-    description:
-      "Betta Fish ကို လူအများက Fighter Fish လို ခေါ်ကြပြီး အိမ်မွေးငါးအဖြစ် အလွန်လူကြိုက်များသည်။",
-    icon: FaCheckCircle,
-    content: [
-      {
-        subtitle: "မူလဇာတိနှင့် သဘာဝနေထိုင်ပုံ",
-        points: [
-          "ထိုင်းနိုင်ငံအလယ်ပိုင်း ရေတိမ်၊ ရေစီးနှေးသော လယ်ကွင်းများ၊ ရွံအိုင်များတွင် တွေ့ရှိခဲ့သည်။",
-          "ယနေ့အချိန်တွင် မြန်မာ၊ လာအို၊ ကမ္ဘောဒီးယား အပါအဝင် အရှေ့တောင်အာရှနိုင်ငံများတွင် သဘာဝအတိုင်း နေထိုင်နေသည်။",
-        ],
-      },
-      {
-        subtitle: "ရေအခြေအနေနှင့် အပူချိန်",
-        points: [
-          "ရေမာနှုန်း 5°–20° dH အတွင်း အသက်ရှင်နိုင်သည်။",
-          "အပူချိန် 75°F–80°F (24°C–27°C) ထားပေးသင့်သည်။",
-          "pH တန်ဖိုး 6.0–7.5 အတွင်းရှိရမည်။",
-        ],
-      },
-      {
-        subtitle: "ကန်အရွယ်အစားနှင့် နေထိုင်ပုံ",
-        points: [
-          "Betta Fish များသည် တစ်ကောင်တည်းနေရတာကို ကြိုက်သည်။",
-          "ကန်အရွယ်အစား 1–5 ဂါလံ သို့မဟုတ် 4” × 4” × 8” မှန်ကန် လေးတစ်လုံးနဲ့ လုံလောက်သည်။",
-        ],
-      },
-      {
-        subtitle: "အစားအစာနှင့် အာဟာရ",
-        points: [
-          "Carnivorous ဖြစ်သောကြောင့် အစာခြောက် (Betta pellets) နှင့် အစာရှင် (bloodworm, artemia, moina) ပေါင်းစပ်ကျွေးသင့်သည်။",
-          "တစ်နေ့ ၆–၁၀ လုံး ကျွေးပြီး မစားကျန်အစာကို ချက်ချင်းဖယ်ရှားရန်လိုသည်။",
-        ],
-      },
-      {
-        subtitle: "Tank Mates နှင့် အုပ်စုဖွဲနေထိုင်မှု",
-        points: [
-          "အထီး Betta များကို တစ်ကောင်တည်း သီးသန့်ထားသင့်သည်။",
-          "အမ Betta များကို ကန်ကျယ်လုံလောက်ပါက အုပ်စုလိုက်ထားနိုင်သည်။",
-          "Guppy, Goldfish, Angelfish စသည့် အမြှီးရှည်ငါးများနှင့် မထားသင့်။",
-        ],
-      },
-      {
-        subtitle: "ထိန်းသိမ်းဂရုစိုက်မှု",
-        points: [
-          "ရေအပူချိန်၊ ရေအရည်အသွေးကို အမြဲစစ်ဆေးရန်လိုသည်။",
-          "3–5 ရက်အတွင်း ရေတစ်ဝက်ခန့် အစားထိုးပေးသင့်သည်။",
-          "Ammonia တက်လာခြင်းကြောင့် မျက်လုံးရောဂါ၊ အမြှီးအတောင်ရောဂါ ဖြစ်နိုင်သည်။",
-        ],
-      },
-    ],
-  };
-
-  const Icon = bettaGuide.icon;
-
   return (
     <div className="min-h-screen bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8 font-myanmar">
       <div className="max-w-4xl mx-auto">
@@ -69,56 +236,19 @@ export default function CareGuide() {
             Fish Care Guide
           </h1>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Betta Fish ကို ကျန်းမာပျော်ရွှင်စွာ နေထိုင်စေဖို့ လိုအပ်သော
-            ဂရုပြုမှုများ။
+            သင့်အိမ်မွေးငါးများကို ကျန်းမာပျော်ရွှင်စွာ နေထိုင်စေရန် လိုအပ်သော
+            ဂရုစိုက်မှုလမ်းညွှန်များ
           </p>
         </div>
 
-        {/* Guide Card */}
-        <motion.div
-          key={bettaGuide.id}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
-        >
-          <div className="p-8 border-b border-gray-100 bg-gray-50/50">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-[#008080]/10 rounded-lg mr-4">
-                <Icon className="w-8 h-8 text-[#008080]" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-[#001F3F]">
-                  {bettaGuide.title}
-                </h2>
-                <p className="text-gray-500">{bettaGuide.description}</p>
-              </div>
-            </div>
-          </div>
+        {/* Betta Guide Card */}
+        <GuideCard guide={bettaGuide} />
 
-          <div className="p-8 grid md:grid-cols-2 gap-8">
-            {bettaGuide.content.map((section, idx) => (
-              <div key={idx}>
-                <h3 className="text-lg font-semibold text-[#001F3F] mb-4 flex items-center">
-                  <span className="w-1.5 h-1.5 bg-[#008080] rounded-full mr-2"></span>
-                  {section.subtitle}
-                </h3>
-                <ul className="space-y-3">
-                  {section.points.map((point, pIdx) => (
-                    <li
-                      key={pIdx}
-                      className="flex items-start text-gray-600 text-sm"
-                    >
-                      <FaCheckCircle className="w-4 h-4 text-[#008080] mt-0.5 mr-3 flex-shrink-0" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Flower Horn Guide Card */}
+        <GuideCard guide={flowerHornGuide} />
+
+        {/* { channaGuide} */}
+        <GuideCard guide={channaGuide} />
       </div>
     </div>
   );

@@ -14,10 +14,9 @@ export function Navbar() {
       path: "/fish",
       dropdown: [
         { name: "All Fish", path: "/fish" },
-        { name: "Belta", path: "/fish?category=belta" },
+        { name: "Betta", path: "/fish?category=betta" },
         { name: "Channa", path: "/fish?category=channa" },
-        { name: "Wild", path: "/fish?category=wild" },
-        { name: "Flower Horn", path: "/fish?category=flower-horn" },
+        { name: "Flower Horn", path: "/fish?category=flower horn" },
       ],
     },
     { name: "FAQ", path: "/faq" },
@@ -150,7 +149,7 @@ export function Navbar() {
                   ) : (
                     <Link
                       to={link.path}
-                      className={`pb-2 text-sm font-medium transition-colors relative ${
+                      className={`flex item-center pb-2 text-sm font-medium transition-colors relative ${
                         isActive(link.path)
                           ? "text-white"
                           : "text-gray-300 hover:text-white"

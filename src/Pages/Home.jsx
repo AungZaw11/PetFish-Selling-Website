@@ -64,8 +64,8 @@ export default function HomePage() {
         
         <div className="max-w-6xl mx-auto px-6 text-center">
         
-          <h2 className="text-2xl font-bold">Explore Categories</h2>
-          <p>Find the perfect inhabitants for your tank, from hardy freshwater starters to stunning exotic showpieces.</p>
+          <h2 className="text-2xl text-[#003366] font-bold mb-3">Explore Categories</h2>
+          <p className="text-gray-600 text-md mb-8 leading-relaxed">Find the perfect inhabitants for your tank, from hardy freshwater starters to stunning exotic showpieces.</p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* CHANNA */}
@@ -162,10 +162,10 @@ export default function HomePage() {
       <section className="py-20 bg-white" id="in-stock">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-bold text-[#003366] mb-8">In Stock</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-15">
             {/* CARD 1 */}
-            <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
-              <div className="relative h-56">
+            <div className="bg-white rounded-2xl shadow-sm  overflow-hidden">
+              <div className="relative h-60">
                 <img
                   src={xelophane}
                   alt="Xelophane"
@@ -192,8 +192,8 @@ export default function HomePage() {
               </div>
             </div>
             {/* CARD 2 */}
-            <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
-              <div className="relative h-56">
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="relative h-60">
                 <img
                   src={snowdragon}
                   alt="Snow Dragon"
@@ -220,8 +220,8 @@ export default function HomePage() {
               </div>
             </div>
             {/* CARD 3 */}
-            <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
-              <div className="relative h-56">
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="relative h-60">
                 <img
                   src={mahachai}
                   alt="Mahachai"
@@ -250,7 +250,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* CARD 4 */}
-            <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
               <div className="relative h-56">
                 <img
                   src={samurai}

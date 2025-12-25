@@ -7,8 +7,8 @@ function OurLegacy() {
   const values = [
     {
       icon: clock,
-      title: "20+ Years",
-      desc: "Serving the community since 2003.",
+      title: "3 Years",
+      desc: "Serving the community since 2022.",
     },
     {
       icon: heart,
@@ -23,9 +23,9 @@ function OurLegacy() {
   ];
 
   const stats = [
-    { value: "20+", label: "Years Experience" },
-    { value: "5000+", label: "Happy Customers" },
-    { value: "200+", label: "Species Available" },
+    { value: "3", label: "Years Experience" },
+    { value: "1787", label: "Happy Customers" },
+    { value: "3", label: "Species Available" },
     { value: "98%", label: "Satisfaction Rate" },
   ];
 
@@ -151,5 +151,6 @@ function OurLegacy() {
 }
 
 export default OurLegacy;
+
 
 

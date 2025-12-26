@@ -1,13 +1,13 @@
 import React from "react";
 import {
   FaFacebook,
-  FaInstagram,
-  FaTwitter,
+  FaTelegram,
   FaTiktok,
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
   FaCreditCard,
+  FaYoutube,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -19,25 +19,27 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
-              Dve <span className="text-[#00CED1]">Seller</span>
+              Due <span className="text-[#00CED1]">Seller</span>
             </h3>
             <p className="text-md text-gray-400 mb-4">
               Premium aquarium fish, expert advice, and sustainable breeding for
               hobbyists worldwide.
             </p>
             <div className="flex space-x-4">
-              <a href="#">
+              <Link to="https://www.facebook.com/profile.php?id=61554060232785&mibextid=wwXIfr&mibextid=wwXIfr" 
+              target="_blank"
+              rel="noopener noreferrer">
                 <FaFacebook size={20} />
-              </a>
-              <a href="#">
-                <FaInstagram size={20} />
-              </a>
-              <a href="#">
-                <FaTwitter size={20} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="https://t.me/Dueseller" target="_blank" rel="noopener noreferrer">
+                <FaTelegram size={20} />
+              </Link>
+              <Link to="https://www.tiktok.com/@due.seller?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
                 <FaTiktok size={20} />
-              </a>
+              </Link>
+              <Link to="https://www.youtube.com/@dueseller2002/shorts" target="_blank" rel="noopener noreferrer">
+                <FaYoutube size={20} />
+              </Link>
             </div>
           </div>
 
@@ -78,11 +80,11 @@ export function Footer() {
                 Nan Shae, Mandalay, Myanmar
               </li>
               <li className="flex items-center">
-                <FaPhone className="mr-2 text-[#00CED1]" /> +95 9 123 456 789
+                <FaPhone className="mr-2 text-[#00CED1]" /> +95 9 257897396
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-2 text-[#00CED1]" />{" "}
-                contact@dveseller.com
+                telegram@dueseller
               </li>
             </ul>
           </div>
@@ -107,7 +109,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Dve Seller. All rights reserved.
+            &copy; {new Date().getFullYear()} Due Seller. All rights reserved.
           </p>
         </div>
       </div>

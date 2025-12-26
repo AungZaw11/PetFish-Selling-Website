@@ -1,15 +1,15 @@
-/* Import Google Fonts (Inter + Noto Serif Myanmar + others if needed) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif+Myanmar:wght@400;500;600;700&display=swap");
+/* Import Google Fonts (Inter + Noto Serif Myanmar + Noto Sans Myanmar) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif+Myanmar:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;700&display=swap");
 
 /* Import Tailwind base styles */
 @import "tailwindcss";
 
-/* Define local Myanmar3 font (optional if you have the file in /public/fonts/) */
+/* Define local Pyidaungsu font */
 @font-face {
-  font-family: "Myanmar3";
-  src: url("/fonts/Myanmar3.woff2") format("woff2"),
-    url("/fonts/Myanmar3.woff") format("woff"),
-    url("/fonts/Myanmar3.ttf") format("truetype");
+  font-family: "Pyidaungsu";
+  src: url("/fonts/Pyidaungsu.woff2") format("woff2"),
+    url("/fonts/Pyidaungsu.woff") format("woff"),
+    url("/fonts/Pyidaungsu.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -18,11 +18,14 @@
 :root {
   --primary-color: #003366;
 }
-
+*{
+  scroll-behavior: smooth;
+}
 /* Global font setup */
 html,
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Pyidaungsu", "Noto Sans Myanmar", "Noto Serif Myanmar",
+    sans-serif;
   background-color: #fafafa;
   color: #001f3f;
   margin: 0;
@@ -35,5 +38,18 @@ body {
 }
 
 .font-myanmar {
-  font-family: "Myanmar3", "Noto Serif Myanmar", sans-serif;
+  font-family: "Pyidaungsu", "Noto Sans Myanmar", "Noto Serif Myanmar",
+    sans-serif;
+}
+
+.font-pyidaungsu {
+  font-family: "Pyidaungsu", sans-serif;
+}
+
+.font-noto-serif-mm {
+  font-family: "Noto Serif Myanmar", serif;
+}
+
+.font-noto-sans-mm {
+  font-family: "Noto Sans Myanmar", sans-serif;
 }

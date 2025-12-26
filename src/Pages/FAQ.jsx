@@ -63,11 +63,11 @@ function FAQ() {
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  xl:mx-80">
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#003366] mb-4">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-[#003366] mb-4 md:text-4xl">
             FAQ
           </h1>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto px-5">
             Answers to frequently asked questions about caring tips and purchasing process.
           </p>
         </div>
@@ -87,7 +87,7 @@ function FAQ() {
                 className="w-full text-left px-5 py-5 flex justify-between items-center text-[#001F3F] font-medium hover:bg-gray-100 transition-colors duration-200 rounded-xl"
                 onClick={() => toggle(index)}
                 >
-                <span className="text-lg font-semibold text-[#001F3F] flex"><img src={QuestionMark} alt=""  /> {faq.question}</span>
+                <span className="text-md font-semibold text-[#001F3F] flex lg:text-lg"><img src={QuestionMark} alt=""  /> {faq.question}</span>
                 <FontAwesomeIcon
                     icon={openIndex === index ? faAngleUp : faAngleDown}
                     className="text-xl"
@@ -95,7 +95,7 @@ function FAQ() {
                 </button>
                 {openIndex === index && (
                 <div className="px-5 py-4 bg-white border-t border-gray-200 whitespace-pre-line rounded-b-xl text-gray-500">
-                    <div className="bg-gray-50 border-l-4 border-l-[#008080]  p-5 rounded-b-lg">{faq.answer}</div>
+                    <div className="bg-gray-50 border-l-4 border-l-[#008080]  p-5 rounded-b-lg text-md">{faq.answer}</div>
                 </div>
                 )}
           </div>

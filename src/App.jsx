@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import ShopInfo from "./Pages/ShopInfo";
 import { PaymentPage } from "./Pages/Payment";
 import { Navbar } from "./components/Navbar";
@@ -17,6 +18,7 @@ import Collection from "./Pages/Collection"; // ✅ Correct: named export from C
 function App() {
   return (
     <BrowserRouter>
+     <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

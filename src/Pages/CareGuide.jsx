@@ -195,7 +195,7 @@ function GuideCard({ guide }) {
             <Icon className="w-8 h-8 text-[#008080]" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-[#001F3F]">{guide.title}</h2>
+            <h2 className="text-xl font-bold text-[#001F3F] md:text-2xl">{guide.title}</h2>
             <p className="text-gray-500">{guide.description}</p>
           </div>
         </div>
@@ -232,10 +232,10 @@ export default function CareGuide() {
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#003366] mb-4">
+          <h1 className="text-3xl font-bold text-[#003366] mb-4 md:text-4xl">
             Fish Care Guide
           </h1>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto px-5">
             သင့်အိမ်မွေးငါးများကို ကျန်းမာပျော်ရွှင်စွာ နေထိုင်စေရန် လိုအပ်သော
             ဂရုစိုက်မှုလမ်းညွှန်များ
           </p>

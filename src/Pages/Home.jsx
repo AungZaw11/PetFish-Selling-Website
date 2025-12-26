@@ -126,6 +126,7 @@ export default function HomePage() {
       {/* ================= STOCK ================= */}
       <section className="py-20 bg-white" id="in-stock">
         <div className="max-w-6xl mx-auto px-6">
+
           <h2 className="text-2xl font-bold mb-8">In Stock</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -133,6 +134,126 @@ export default function HomePage() {
             <StockCard img={snowdragon} name="Snow Dragon" />
             <StockCard img={mahachai} name="Mahachai" />
             <StockCard img={samurai} name="Samurai" />
+=======
+          <h2 className="text-2xl font-bold text-[#003366] mb-8">In Stock</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-15">
+            {/* CARD 1 */}
+            <div className="bg-white rounded-2xl shadow-sm  overflow-hidden">
+              <div className="relative h-60">
+                <img
+                  src={xelophane}
+                  alt="Xelophane"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 right-3 bg-[#E6F6FF] text-[#00A6FB] text-xs px-3 py-1 rounded-full">
+                  HMPK
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-[#003366]">Xelophane</h3>
+                <p className="text-xs text-gray-400 mb-6"> Betta </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semi-bold text-[#003366]">
+                    Male – 15000 mmk <br /> Female – 10000 mmk{" "}
+                  </span>
+                  <Link
+                    to="/fish?category=betta"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E6F6FF] text-[#00A6FB]"
+                  >
+                    →
+                  </Link>
+                </div>
+              </div>
+              </div>
+            </div>
+            {/* CARD 2 */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="relative h-60">
+                <img
+                  src={snowdragon}
+                  alt="Snow Dragon"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 right-3 bg-[#E6F6FF] text-[#00A6FB] text-xs px-3 py-1 rounded-full">
+                  HMPK
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-[#003366]">Snow Dragon</h3>
+                <p className="text-xs text-gray-400 mb-6"> Betta </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semi-bold text-[#003366]">
+                    Male – 15000 mmk <br /> Female – 10000 mmk{" "}
+                  </span>
+                  <Link
+                    to="/fish?category=betta"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E6F6FF] text-[#00A6FB]"
+                  >
+                    →
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* CARD 3 */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="relative h-60">
+                <img
+                  src={mahachai}
+                  alt="Mahachai"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 right-3 bg-[#E6F6FF] text-[#00A6FB] text-xs px-3 py-1 rounded-full">
+                  Wild
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-[#003366]">Mahachai</h3>
+                <p className="text-xs text-gray-400 mb-6"> Betta </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semi-bold text-[#003366]">
+                    Fry – 8000 mmk <br /> Junior – 10000 mmk <br /> Super Junior
+                    – 15000 mmk <br /> Adult male – 25000 mmk <br /> Adult
+                    female – 15000 mmk
+                  </span>
+                  <Link
+                    to="/fish?category=betta"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E6F6FF] text-[#00A6FB]"
+                  >
+                    →
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* CARD 4 */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="relative h-60">
+                <img
+                  src={samurai}
+                  alt="Samurai"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-3 right-3 bg-[#E6F6FF] text-[#00A6FB] text-xs px-3 py-1 rounded-full">
+                  HMPK
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-[#003366]"> Samurai </h3>
+                <p className="text-xs text-gray-400 mb-6"> Betta </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semi-bold text-[#003366]">
+                    Junior-10000 mmk <br /> Adult male-18000 mmk <br /> Adult
+                    female-15000 mmk <br />
+                  </span>
+                  <Link
+                    to="/fish?category=betta"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E6F6FF] text-[#00A6FB]"
+                  >
+                    →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

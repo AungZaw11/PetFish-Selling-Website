@@ -16,6 +16,7 @@ export function Navbar() {
         { name: "All Fish", path: "/fish" },
         { name: "Betta", path: "/fish?category=betta" },
         { name: "Channa", path: "/fish?category=channa" },
+
         { name: "Flower Horn", path: "/fish?category=flower horn" },
       ],
     },
@@ -36,7 +37,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center py-4">
           {/* Top Row: Logo & Toggle */}
-          <div className="w-full flex justify-between md:justify-center items-center relative mb-0 md:mb-6">
+          <div className="w-full flex-row-reverse flex justify-between md:justify-center items-center relative mb-0 md:mb-6">
             {/* Mobile Menu Button */}
             <div className="md:hidden">
               <button

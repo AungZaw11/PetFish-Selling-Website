@@ -37,7 +37,7 @@ export function PaymentPage() {
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
         <header className="text-center">
-          <h1 className="text-4xl font-bold text-[#003366]">Secure Payment</h1>
+          <h1 className="text-3xl font-bold text-[#003366] md:text-4xl">Secure Payment</h1>
         </header>
 
         <form

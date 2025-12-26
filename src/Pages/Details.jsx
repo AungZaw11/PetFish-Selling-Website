@@ -102,7 +102,7 @@ export default function FishDetail() {
 
             {/* BUY BUTTON */}
             <button
-              onClick={() => (window.location.href = "https://t.me/Dueseller")}
+              onClick={() => (window.location.href = "https://t.me/Awn6932")}
               className="w-full mt-4 bg-teal-700 hover:bg-teal-800 text-white py-3 rounded-xl text-sm sm:text-base"
             >
               Buy Now

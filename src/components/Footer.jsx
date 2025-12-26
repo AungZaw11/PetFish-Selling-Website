@@ -78,7 +78,7 @@ export function Footer() {
                 Nan Shae, Mandalay, Myanmar
               </li>
               <li className="flex items-center">
-                <FaPhone className="mr-2 text-[#00CED1]" /> +95 9 123 456 789
+                <FaPhone className="mr-2 text-[#00CED1]" /> +95 9 257897396
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-2 text-[#00CED1]" />{" "}

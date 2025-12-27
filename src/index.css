@@ -53,3 +53,7 @@ body {
 .font-noto-sans-mm {
   font-family: "Noto Sans Myanmar", sans-serif;
 }
+
+.scroll-offset {
+  scroll-margin-top: 100px; /* adjust this value based on your header height */
+}

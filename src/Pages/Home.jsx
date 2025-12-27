@@ -338,8 +338,7 @@ export default function HomePage() {
                   </ul>
 
                   <Link
-                    to="/care-guides#bettaGuide
-"
+                    to="/care-guides#betta"
                     className="inline-block mt-4 text-sm text-cyan-600 font-medium"
                   >
                     View More →
@@ -374,7 +373,7 @@ export default function HomePage() {
                   </ul>
 
                   <Link
-                    to="/care-guides#channaGuide"
+                    to="/care-guides#channa"
                     className="inline-block mt-4 text-sm text-cyan-600 font-medium"
                   >
                     View More →
@@ -409,7 +408,7 @@ export default function HomePage() {
                   </ul>
 
                   <Link
-                    to="/care-guides#flowerHornGuide"
+                    to="/care-guides#flowerHorn"
                     className="inline-block mt-4 text-sm text-cyan-600 font-medium"
                   >
                     View More →

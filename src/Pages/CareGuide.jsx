@@ -187,10 +187,10 @@ import { FaCheckCircle } from "react-icons/fa";
 };
 
 // Reusable Guide Card Component
-function GuideCard({ guide }) {
+function GuideCard({ guide, id}) {
   const Icon = guide.icon;
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12">
+    <div id={id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12 scroll-offset lg:scroll-mt-[200px]">
       <div className="p-8 border-b border-gray-100 bg-gray-50/50">
         <div className="flex items-center mb-4">
           <div className="p-3 bg-[#008080]/10 rounded-lg mr-4">
@@ -247,18 +247,17 @@ export default function CareGuide() {
         {/* Betta Guide Card */}
         
 
-        <GuideCard guide={bettaGuide} />
+        <GuideCard guide={bettaGuide} id="betta"/>
         
+        {/* { channaGuide} */}
+        
+        <GuideCard guide={channaGuide} id="channa"/>
 
         {/* Flower Horn Guide Card */}
         
-        <GuideCard guide={flowerHornGuide} />
+        <GuideCard guide={flowerHornGuide} id="flowerHorn"/>
         
 
-        {/* { channaGuide} */}
-        
-        <GuideCard guide={channaGuide} />
-    
       </div>
       
     </div>

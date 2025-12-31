@@ -15,6 +15,7 @@ export default function Collection() {
   // Sync state when URL changes
   useEffect(() => {
     setSelectedCategory(categoryFromUrl ? categoryFromUrl : "All");
+    window.scrollTo(0, 0);
   }, [categoryFromUrl]);
 
   const filteredFish =

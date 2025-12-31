@@ -34,10 +34,10 @@ export function Navbar() {
 
   return (
     <nav className="bg-[#003366] text-white sticky top-0 z-50 shadow-xl border-b border-[#00CED1]/20">
-      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-4">
+      <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center ">
           {/* Top Row: Logo & Toggle */}
-          <div className="w-full flex-row-reverse flex justify-between md:justify-center items-center relative mb-0 md:mb-6">
+          <div className="w-full flex-row-reverse flex justify-between md:justify-center items-center relative mb-0 md:mb-2">
             {/* Mobile Menu Button */}
             <div className="md:hidden">
               <button
@@ -95,7 +95,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block w-full border-t border-white/10 pt-5">
+          <div className="hidden md:block w-full border-t border-white/10 pt-3">
             <div className="flex justify-center items-center space-x-8">
               {links.map((link) => (
                 <div key={link.name} className="relative">
@@ -172,7 +172,7 @@ export function Navbar() {
       {/* Mobile Nav Drawer */}
       {isOpen && (
         <div className="md:hidden bg-[#002855] border-t border-[#00CED1]/20">
-          <div className="px-4 pt-4 pb-6 space-y-2">
+          <div className="px-4 pt-3 pb-4 space-y-2">
             {links.map((link) => (
               <div key={link.name}>
                 {link.dropdown ? (
@@ -208,7 +208,7 @@ export function Navbar() {
                             key={item.name}
                             to={item.path}
                             onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2.5 rounded-md text-sm font-medium text-gray-400 hover:text-[#00CED1] hover:bg-white/5"
+                            className="block px-5 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-[#00CED1] hover:bg-white/5"
                           >
                             {item.name}
                           </Link>
